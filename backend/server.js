@@ -5,9 +5,6 @@ const socketio = require("socket.io");
 const fs = require("fs");
 const path = require("path");
 
-const certPath = path.join(__dirname, "certs", "10.89.72.171.pem");
-const keyPath = path.join(__dirname, "certs", "10.89.72.171-key.pem");
-
 const options = {
   cert: fs.readFileSync(certPath),
   key: fs.readFileSync(keyPath),
