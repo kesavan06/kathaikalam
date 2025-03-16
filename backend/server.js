@@ -5,13 +5,10 @@ const socketio = require("socket.io");
 const fs = require("fs");
 const path = require("path");
 
-const options = {
-  cert: fs.readFileSync(certPath),
-  key: fs.readFileSync(keyPath),
-};
+
 
 const app = express();
-const server = https.createServer(options, app);
+const server = https.createServer(app);
 const io = socketio(server, {
   cors: {
     origin: "*",
